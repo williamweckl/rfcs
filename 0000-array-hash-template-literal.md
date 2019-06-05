@@ -26,7 +26,7 @@
 ### Hash literal
 
 ```handlebars
-<LinkTo @route="post" @models={{[@post.id @post.comments]}} @query={{[showComments=false]}} />
+<LinkTo @route="post" @model={{@post.id}} @query={{[showComments=false]}} />
 ```
 
 ```handlebars
@@ -42,7 +42,6 @@
 <LinkTo @route="post" @models={{models}} @query={{query}} />
 ```
 
-
 ## Motivation
 
 > Why are we doing this? What use cases does it support? What is the expected
@@ -57,6 +56,39 @@ familiar with the framework to understand, and for somebody familiar with the
 implementation to implement. This should get into specifics and corner-cases,
 and include examples of how the feature is used. Any new terminology should be
 defined here.
+
+```handlebars
+{{["this" "is" "an" "array"]}}
+```
+
+```handlebars
+{{ ["this" "is" "an" "array" ["inside" "an" "array"]] }}
+```
+
+```handlebars
+{{ [one="this" two="is" three="a" four="pojo"] }}
+```
+
+```handlebars
+{{
+    [
+        one="this"
+        two="is"
+        three="a"
+        four="pojo" 
+        [one="inside" two="a" three="pojo"] 
+    ] 
+}}
+```
+
+```handlebars
+{{
+    [
+        name="Katie Gengler"
+        teams=["cli" "framework" "steering"]
+    ]
+}}
+```
 
 ## How we teach this
 
