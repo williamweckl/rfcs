@@ -57,6 +57,8 @@ implementation to implement. This should get into specifics and corner-cases,
 and include examples of how the feature is used. Any new terminology should be
 defined here.
 
+Accepting this syntax precludes using `[]` for dynamic property lookup.
+
 ```handlebars
 {{ ["this" "is" "an" "array"] }}
 ```
