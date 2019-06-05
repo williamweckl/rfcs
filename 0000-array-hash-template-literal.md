@@ -58,7 +58,7 @@ and include examples of how the feature is used. Any new terminology should be
 defined here.
 
 ```handlebars
-{{["this" "is" "an" "array"]}}
+{{ ["this" "is" "an" "array"] }}
 ```
 
 ```handlebars
